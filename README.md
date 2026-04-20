@@ -1,60 +1,123 @@
 # 🚀 AWS S3 Static Website Hosting
 
+![AWS](https://img.shields.io/badge/AWS-S3-orange)
+![Project](https://img.shields.io/badge/Project-Completed-brightgreen)
+![Type](https://img.shields.io/badge/Type-Static%20Website-blue)
+![Level](https://img.shields.io/badge/Level-Beginner-important)
+
+---
+
 ## 📌 Project Overview
-This project demonstrates how to host a static website using Amazon S3.  
+
+This project demonstrates how to host a static website using Amazon S3.
+
+The implementation covers:
+- Creating an S3 bucket
+- Uploading website files (HTML/CSS)
+- Enabling static website hosting
+- Configuring bucket policy for public access
+- Accessing the website via S3 endpoint
 
 ---
 
-## 🛠️ Services Used
-- Amazon S3
-- AWS Management Console
+## 🏗️ Architecture
+
+User → S3 Bucket → Static Website Hosting → Public URL
 
 ---
 
-## 📂 Project Architecture
-- Created S3 Bucket
-- Uploaded static website files
-- Enabled static hosting
-- Configured public access via bucket policy
+## ⚙️ Implementation Steps
+
+### 🔹 Step 1: Create S3 Bucket
+- Created a bucket in AWS S3
+- Region: ap-south-1
+
+![Bucket Created](images/s3-bucket.png)
 
 ---
 
-## ⚙️ Steps Performed
+### 🔹 Step 2: Upload Website Files
+- Uploaded index.html file into the bucket
 
-### 1️⃣ Created S3 Bucket
-![Bucket Created](images/bucket-created.png)
-
----
-
-### 2️⃣ Uploaded Website Files
 ![File Upload](images/file-upload.png)
 
 ---
 
-### 3️⃣ Enabled Static Website Hosting
+### 🔹 Step 3: Enable Static Website Hosting
+- Enabled static hosting in Properties
+- Set index document: index.html
+
 ![Static Hosting](images/static-hosting.png)
 
 ---
 
-### 4️⃣ Configured Bucket Policy (Public Access)
+### 🔹 Step 4: Configure Bucket Policy
+- Allowed public access using bucket policy
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::my-static-website-450/*"
+    }
+  ]
+}
+
 ![Bucket Policy](images/bucket-policy.png)
 
 ---
 
-### 5️⃣ Final Website Output
+### 🔹 Step 5: Access Website
+- Opened the S3 static website endpoint
+- Website successfully hosted
+
 ![Website Output](images/website-output.png)
 
 ---
 
-## 📚 Learning Outcomes
-- Learned how to host static websites on AWS S3
-- Understood bucket policies and public access
-- Gained hands-on experience with cloud storage services
+## 🌐 Final Output
+
+Static website successfully deployed on AWS S3  
+Accessible via public endpoint  
+Fully functional frontend website  
 
 ---
 
-## 🧠 Key Concepts
-- Static Website Hosting
-- Object Storage
-- IAM & Bucket Policies
-- Public Access Control
+## 📚 Learning Outcomes
+
+- Understanding AWS S3 service  
+- Static website hosting configuration  
+- Bucket policy & public access control  
+- Real-world cloud deployment basics  
+
+---
+
+## 🚀 Future Enhancements
+
+- Integrate CloudFront (CDN)  
+- Add custom domain (Route 53)  
+- Enable HTTPS using SSL  
+
+---
+
+## 📂 Project Structure
+
+aws-s3-static-website-hosting/
+│── images/
+│   ├── s3-bucket.png
+│   ├── file-upload.png
+│   ├── static-hosting.png
+│   ├── bucket-policy.png
+│   └── website-output.png
+│── index.html
+│── README.md
+
+---
+
+## 👨‍💻 Author
+
+Swaraj Sutradhar  
