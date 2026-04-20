@@ -32,7 +32,7 @@ User → S3 Bucket → Static Website Hosting → Public URL
 - Created a bucket in AWS S3
 - Region: ap-south-1
 
-![Bucket Created](images/s3-bucket.png)
+![Bucket Created](images/bucket-created.png)
 
 ---
 
