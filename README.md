@@ -2,7 +2,6 @@
 
 ## 📌 Project Overview
 This project demonstrates how to host a static website using Amazon S3.  
-The website is publicly accessible via an S3 endpoint.
 
 ---
 
