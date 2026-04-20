@@ -47,11 +47,6 @@ The website is publicly accessible via an S3 endpoint.
 
 ---
 
-## 🌐 Live Website
-👉 Paste your S3 URL here
-
----
-
 ## 📚 Learning Outcomes
 - Learned how to host static websites on AWS S3
 - Understood bucket policies and public access
